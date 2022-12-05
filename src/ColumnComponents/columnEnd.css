@@ -1,0 +1,23 @@
+#endColumn{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+table{
+    border: 1px solid white;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 80%;
+}
+
+.topicStatContain table{
+    margin-top: 4%;
+    background-color: green;
+}
+
+.topicStatContain thead{
+    margin-top: 4%;
+    color: white;
+    text-align: center;
+}
