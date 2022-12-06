@@ -1,0 +1,42 @@
+#endColumn{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+table{
+    border: 1px solid white;
+    margin: auto;
+    margin-bottom: 2%;
+    width: 80%;
+}
+
+.topicStatContain table{
+    margin-top: 4%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.topicStatContain thead{
+    color: white;
+    text-align: center;
+    border: 2px white solid;
+    width: 105%;
+    align-self: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#topicStatHeader{
+    background-color: blue;
+    color: white;
+}
+
+.topicStatContain td{
+    border: 3px blue solid;
+}
