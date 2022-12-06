@@ -2,6 +2,7 @@
     background-color: bisque;
     display: flex;
     flex-direction: column;
+    flex: 2;
 }
 
 table{
