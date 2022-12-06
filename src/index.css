@@ -59,8 +59,9 @@ header > div{
 main{
     flex: 1;
     display: flex;
-    padding: 0px 10px;
-    background-color: lightgray;
+    padding: 20px 10px;
+    background-color: #353839;
+    align-items: center;
 }
 
 #columnMain{
