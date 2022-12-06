@@ -14,10 +14,29 @@ table{
 .topicStatContain table{
     margin-top: 4%;
     background-color: green;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
 }
 
 .topicStatContain thead{
-    margin-top: 4%;
     color: white;
     text-align: center;
+    border: 2px white solid;
+    width: 105%;
+    align-self: center;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#topicStatHeader{
+    background-color: blue;
+    color: white;
+}
+
+.topicStatContain td{
+    border: 3px blue solid;
 }

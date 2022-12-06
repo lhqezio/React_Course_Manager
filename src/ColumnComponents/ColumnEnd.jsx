@@ -25,13 +25,15 @@ function ColumnEnd () {
   topics.sort((a,b) => b.nberPost - a.nberPost);
   //Sort posts by date
   posts.sort((a, b) =>{return b.date.localeCompare(a.date);});
+
+  
   return( 
     <section id="endColumn">
       <div class="topicStatContain">
-        <table>
+        <table name="topicStatTbl">
           <thead>Topic Stats</thead>
           <tbody>
-            <tr id="topicStatHeader">
+            <tr class="topicStatHeader">
               <th>topic_title</th>
               <th>nberPosts</th>
               <th>status</th>
@@ -47,7 +49,7 @@ function ColumnEnd () {
         </table>
       </div>
       <div class="recentPostContain">
-        <table>
+        <table name="recentPostTbl">
           <thead>Recent Posts</thead>
           <tbody>
             <tr id="recentPostsHeader">
@@ -66,18 +68,19 @@ function ColumnEnd () {
         </table>
       </div>
       <div class="userStatContain">
-        <table>
+        <table name="userStatTbl">
           <thead>Users stats</thead>
           <tbody>
-            <tr id="userStatHeader">
+            <tr class="userStatHeader">
               <th>user</th>
               <th>nberPosts</th>
             </tr>
             {users.map((user) => 
-              <tr>
+            <tr>
                 <td>{user.user_id}</td>
                 <td>{user.nberPosts}</td>
               </tr>
+              
             )}
           </tbody>
         </table>
@@ -85,4 +88,21 @@ function ColumnEnd () {
     </section>
 )};
 
+function changeRowColor(tableName, tbleHeader){
+  
+  let tbl = document.getElementsByName(`${tableName}`)[0];
+  let sibRow = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-2];
+  let thead = tbl.getElementsByClassName(`${tbleHeader}`)[0];
+  let row = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-1];
+  if(sibRow != thead && sibRow.style.backgroundColor == 'aqua'){
+      row.style.backgroundColor = 'skyblue';
+  }else{
+      row.style.backgroundColor = 'aqua';
+    }
+  }
+
 export default ColumnEnd;
+
+
+
+  
