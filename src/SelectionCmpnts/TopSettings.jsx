@@ -6,12 +6,18 @@ class TopSettings extends Component {
         super(props);
             this.state = {
                 topics : this.getTopics("1"),
-                category: this.getCategories()
             } 
             this.onChange = this.onChange.bind(this);
             this.getCategories = this.getCategories.bind(this);
             this.getTopics = this.getTopics.bind(this);
+            this.categories = this.getCategories();
     }
+    /**
+     * Get categories array from data
+     * @returns categories array
+     * @memberof TopSettings
+     * 
+    */
     getCategories() {
         let categories = null;
         if (this.props.data) {
@@ -22,6 +28,11 @@ class TopSettings extends Component {
         }
         return categories;
     }
+    /**
+     * Get topics array from category number
+     * @param {*} num - category number
+     * @returns topics array
+     */
     getTopics(num) {
         let topics = null;
         if (this.props.data) {
@@ -39,7 +50,7 @@ class TopSettings extends Component {
     render() {
         return (
             <div className="top-settings">
-                <DropDown options={this.state.category} onChange={this.onChange} type="category" />
+                <DropDown options={this.categories} onChange={this.onChange} type="category" />
                 <DropDown options={this.state.topics} onChange={this.props.topicOnchange} type="topic" />
             </div>
         );
