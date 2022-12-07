@@ -7,6 +7,6 @@ import ColumnMain from './ColumnComponents/ColumnMain';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ColumnMain />
+    <App />
   </React.StrictMode>
 );
