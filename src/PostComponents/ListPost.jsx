@@ -14,6 +14,11 @@ class ListPost extends Component {
         this.localPostsIdChange= this.localPostsIdChange.bind(this);
         this.localPostsIdChange();
     }
+    componentDidUpdate(prevProps) {
+        if(this.props.posts !== prevProps.posts){
+            this.setState({posts: this.props.posts});
+        }
+    }
     onDislikeChange(e) {
         let id = this.toIndex(e.target.id);
         let posts = this.state.posts;
