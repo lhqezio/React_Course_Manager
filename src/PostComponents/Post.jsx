@@ -6,11 +6,11 @@ function Post(props) {
         {post.text}
       </div>
       likes: {post.like}
-      <button id={post.id} onChange={likeOnChange}>Like</button>
-      <button id={post.id}onChange={dislikeOnChange}>Dislike</button>
+      <button id={"l"+post.id} onClick={likeOnChange}>Like</button>
+      <button id={"d"+post.id}onClick={dislikeOnChange}>Dislike</button>
       <div className="info">
         by {post.author}    {post.date}    {post.replies}
-        <button id={post.id} onChange={removeOnChange}>Remove</button>
+        <button id={"r"+post.id} onClick={removeOnChange}>Remove</button>
       </div>
     </div>
   );
