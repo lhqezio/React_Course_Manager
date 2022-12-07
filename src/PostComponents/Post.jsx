@@ -1,16 +1,20 @@
 function Post(props) {
-  const { post,likeOnChange,dislikeOnChange,removeOnChange } = props;
+  const { post, likeOnChange, dislikeOnChange, removeOnChange } = props;
   return (
     <div>
-      <div className="header">
-        {post.text}
-      </div>
+      <div className="header">{post.text}</div>
       likes: {post.like}
-      <button id={"l"+post.id} onClick={likeOnChange}>Like</button>
-      <button id={"d"+post.id}onClick={dislikeOnChange}>Dislike</button>
+      <button id={"l" + post.id} onClick={likeOnChange}>
+        Like
+      </button>
+      <button id={"d" + post.id} onClick={dislikeOnChange}>
+        Dislike
+      </button>
       <div className="info">
-        by {post.author}    {post.date}    {post.replies}
-        <button id={"r"+post.id} onClick={removeOnChange}>Remove</button>
+        by {post.author} {post.date} {post.replies}
+        <button id={"r" + post.id} onClick={removeOnChange}>
+          Remove
+        </button>
       </div>
     </div>
   );

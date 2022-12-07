@@ -1,69 +1,70 @@
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 
-body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0%;
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
 }
 
-#root{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-#main_container{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: slategray;
-    padding: 10px;
+#main_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: slategray;
+  padding: 10px;
 }
 
-header, footer{
-    background-color: #1B1212;
-    display: flex;
-    padding: 0px 10px;
-    color: white;
+header,
+footer {
+  background-color: #1b1212;
+  display: flex;
+  padding: 0px 10px;
+  color: white;
 }
 
-header{
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+header {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
-footer{
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+footer {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-h1{
-    flex: 1;
+h1 {
+  flex: 1;
 }
 
-header > div{
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+header > div {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#search{
-    width: 95%;
-    height: 60%;
+#search {
+  width: 95%;
+  height: 60%;
 }
 
-main{
-    flex: 1;
-    display: flex;
-    padding: 20px 10px;
-    background-color: #353839;
-    align-items: center;
+main {
+  flex: 1;
+  display: flex;
+  padding: 20px 10px;
+  background-color: #353839;
+  align-items: center;
 }
 
-#columnMain{
-    flex: 3;
+#columnMain {
+  flex: 3;
 }
