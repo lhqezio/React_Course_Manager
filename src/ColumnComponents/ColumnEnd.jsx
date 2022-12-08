@@ -3,10 +3,12 @@ import "./columnEnd.css";
 import userData from "../user-data.json";
 import forumData from "../forum-data.json"
 import TopicStatTbl from "../TableComponents/TopicStatsTbl";
+import RecentPostTbl from "../TableComponents/RecentPostsTbl";
+import UserStatTbl from "../TableComponents/UserStatsTbl";
 
 function ColumnEnd () {
-  //Store users --(Sorted by nbrPost)
-  let [users] = useState(userData.users.sort((a,b) => b.nberPosts - a.nberPosts));
+  //Store users
+  let users = [];
   //Store topic
   let topics = [];
   //Store posts
@@ -22,31 +24,12 @@ function ColumnEnd () {
     })
     });
   });
-  //Sort posts by date
-  posts.sort((a, b) =>{return b.date.localeCompare(a.date);});
-
   
   return( 
     <section id="endColumn">
       <TopicStatTbl topics = {topics} />
-      <div class="userStatContain">
-        <table name="userStatTbl">
-          <thead>Users stats</thead>
-          <tbody>
-            <tr class="userStatHeader">
-              <th>user</th>
-              <th>nberPosts</th>
-            </tr>
-            {users.map((user) => 
-            <tr>
-                <td>{user.user_id}</td>
-                <td>{user.nberPosts}</td>
-              </tr>
-              
-            )}
-          </tbody>
-        </table>
-      </div>
+      <RecentPostTbl posts = {posts} />
+      <UserStatTbl users = {users} />
     </section>
 )};
 
