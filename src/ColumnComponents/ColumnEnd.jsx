@@ -1,10 +1,8 @@
-import React, { useState } from "react";
 import "./columnEnd.css";
-import userData from "../user-data.json";
-import forumData from "../forum-data.json"
 import TopicStatTbl from "../TableComponents/TopicStatsTbl";
 import RecentPostTbl from "../TableComponents/RecentPostsTbl";
 import UserStatTbl from "../TableComponents/UserStatsTbl";
+import UseFetch from "../CustomHooks/UseFetch";
 
 function ColumnEnd () {
   //Store users
@@ -13,7 +11,15 @@ function ColumnEnd () {
   let topics = [];
   //Store posts
   let posts = [];
-  let [categories] = useState(forumData.categories);
+
+  let categories =[];
+
+  //Using the urls
+  const forumUrl = "https://sonic.dawsoncollege.qc.ca/~nasro/js320/project2/forum-data.php"    
+  const { forumData, isPendingForum, errorForum } = UseFetch(forumUrl);
+  const userUrl = "https://sonic.dawsoncollege.qc.ca/~nasro/js320/project2/forum-data.php"    
+  const { userData, isPendingUser, errorUser} = UseFetch(userUrl);
+  
   categories.forEach((category) => {
     category.topicList.forEach((top) =>{
       //Fill topics
@@ -24,7 +30,7 @@ function ColumnEnd () {
     })
     });
   });
-  
+
   return( 
     <section id="endColumn">
       <TopicStatTbl topics = {topics} />
