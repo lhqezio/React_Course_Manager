@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./columnEnd.css";
 import userData from "../user-data.json";
 import forumData from "../forum-data.json"
+import TopicStatTbl from "../TableComponents/TopicStatsTbl";
 
 function ColumnEnd () {
   //Store users --(Sorted by nbrPost)
@@ -21,52 +22,13 @@ function ColumnEnd () {
     })
     });
   });
-  //Sort topics by nberPost
-  topics.sort((a,b) => b.nberPost - a.nberPost);
   //Sort posts by date
   posts.sort((a, b) =>{return b.date.localeCompare(a.date);});
 
   
   return( 
     <section id="endColumn">
-      <div class="topicStatContain">
-        <table name="topicStatTbl">
-          <thead>Topic Stats</thead>
-          <tbody>
-            <tr class="topicStatHeader">
-              <th>topic_title</th>
-              <th>nberPosts</th>
-              <th>status</th>
-            </tr>
-            {topics.map((topic) => 
-              <tr>
-                <td>{topic.topic_title}</td>
-                <td>{topic.nberPost}</td>
-                <td>{topic.status}</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
-      <div class="recentPostContain">
-        <table name="recentPostTbl">
-          <thead>Recent Posts</thead>
-          <tbody>
-            <tr id="recentPostsHeader">
-              <th>autor</th>
-              <th>date</th>
-              <th>rate</th>
-            </tr>
-            {posts.map((post) => 
-              <tr>
-                <td>{post.author}</td>
-                <td>{post.date}</td>
-                <td>{post.rate}</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+      <TopicStatTbl topics = {topics} />
       <div class="userStatContain">
         <table name="userStatTbl">
           <thead>Users stats</thead>
