@@ -1,5 +1,3 @@
-import { Component } from "react";
-import ColumnEnd from "../ColumnComponents/ColumnEnd";
 
 const TopicStatTbl = function (props){
     let topics = props.topics;

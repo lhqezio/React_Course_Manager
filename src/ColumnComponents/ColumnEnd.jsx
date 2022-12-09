@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./columnEnd.css";
 import TopicStatTbl from "../TableComponents/TopicStatsTbl";
 import UserStatTbl from "../TableComponents/UserStatTbl";
