@@ -16,7 +16,8 @@ class ListPost extends Component {
   }
   componentDidUpdate(prevProps) {
     if (this.props.posts !== prevProps.posts) {
-      this.setState({ posts: this.props.posts });
+      let temp = this.props.posts;
+      this.localPostsIdChange(temp);
     }
   }
   onDislikeChange(e) {
@@ -41,15 +42,15 @@ class ListPost extends Component {
     this.localPostsIdChange();
   }
   toIndex(id) {
-    return id.slice(1);
+    return parseInt(id.slice(1));
   }
-  localPostsIdChange() {
-    let temp = this.state.posts;
-    for (let i = 0; i < this.state.posts.length; i++) {
+  localPostsIdChange(temp = this.state.posts) {
+    for (let i = 0; i < temp.length; i++) {
       temp[i].id = i;
       this.setState({ posts: temp });
     }
   }
+  
   render() {
     return (
       <div id ="post">
