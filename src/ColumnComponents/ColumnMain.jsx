@@ -29,7 +29,7 @@ function ColumnMain() {
     return <div>Loading</div>;
   } else {
     return (
-      <div>
+      <div id="columnMain">
         <TopSettings
           data={data}
           categoryOnchange={categoryOnchange}

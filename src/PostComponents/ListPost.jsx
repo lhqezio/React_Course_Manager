@@ -53,7 +53,7 @@ class ListPost extends Component {
   
   render() {
     return (
-      <div>
+      <div id ="post">
         {this.state.posts.map((post) => {
           return (
             <Post

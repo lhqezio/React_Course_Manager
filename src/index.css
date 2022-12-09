@@ -39,6 +39,8 @@ header {
 footer {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  justify-content: space-between;
+  padding: 0px 20px;
 }
 
 h1 {
@@ -67,4 +69,16 @@ main {
 
 #columnMain {
   flex: 3;
+  background-color: #696969;
+  height: 70vh;
+  overflow-y: auto;
+  border-radius: 30px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+#post{
+  background-color: lightgray;
+  border: solid black 2px;
+  padding: 10px;
 }
