@@ -1,54 +1,49 @@
 import React, { useState } from "react";
 import "./columnEnd.css";
-import userData from "../user-data.json";
-import forumData from "../forum-data.json"
 import TopicStatTbl from "../TableComponents/TopicStatsTbl";
+import UserStatTbl from "../TableComponents/UserStatTbl";
+import RecentPostsTbl from "../TableComponents/RecentPostsTbl";
+import UseFetch from "../CustomHooks/UseFetch";
 
 function ColumnEnd () {
-  //Store users --(Sorted by nbrPost)
-  let [users] = useState(userData.users.sort((a,b) => b.nberPosts - a.nberPosts));
-  //Store topic
-  let topics = [];
-  //Store posts
-  let posts = [];
-  let [categories] = useState(forumData.categories);
-  categories.forEach((category) => {
-    category.topicList.forEach((top) =>{
-      //Fill topics
-      topics.push(top);
-      top.listPosts.forEach((post) =>{
-        //Fill posts
-        posts.push(post);
-    })
-    });
-  });
-  //Sort posts by date
-  posts.sort((a, b) =>{return b.date.localeCompare(a.date);});
-
   
-  return( 
-    <section id="endColumn">
-      <TopicStatTbl topics = {topics} />
-      <div class="userStatContain">
-        <table name="userStatTbl">
-          <thead>Users stats</thead>
-          <tbody>
-            <tr class="userStatHeader">
-              <th>user</th>
-              <th>nberPosts</th>
-            </tr>
-            {users.map((user) => 
-            <tr>
-                <td>{user.user_id}</td>
-                <td>{user.nberPosts}</td>
-              </tr>
-              
-            )}
-          </tbody>
-        </table>
-      </div>
-    </section>
-)};
+  const userUrl = "https://sonic.dawsoncollege.qc.ca/~nasro/js320/project2/users-data.php";
+  const forumUrl = "https://sonic.dawsoncollege.qc.ca/~nasro/js320/project2/forum-data.php"
+  
+  //Variables to store
+  let userData = UseFetch(userUrl);
+  let forumData = UseFetch(forumUrl);
+  
+  if(userData.isPending || forumData.isPending){
+    return <div>Loading</div>;
+  }else{
+    //Store list of users when the data is loaded
+    let users = Object.values(userData.data);
+    let userList = users[0];
+  
+    //Store topics and posts 
+    let topics = [];
+    let posts = [];  
+    let categories = Object.values(forumData.data);
+    categories[0].forEach((category) => {
+      Object.values(category.topicList).forEach((top) =>{
+        //Fill topics
+        topics.push(top);
+        top.listPosts.forEach((post) =>{
+          //Fill posts
+          posts.push(post);
+      });
+      });
+    });
+    return( 
+      <section id="endColumn">
+        <UserStatTbl users = {userList} />
+        <TopicStatTbl topics = {topics} />
+        <RecentPostsTbl posts = {posts} />
+      </section>
+    )
+  }
+};
 
 function changeRowColor(tableName, tbleHeader){
   
@@ -64,7 +59,6 @@ function changeRowColor(tableName, tbleHeader){
   }
 
 export default ColumnEnd;
-
 
 
   

@@ -1,9 +1,9 @@
 import { Component } from "react";
 import ColumnEnd from "../ColumnComponents/ColumnEnd";
 
-const RecentPostTbl = function  (props){
+const RecentPostsTbl = function  (props){
     let posts = props.posts;
-    posts.sort((a,b) => b.nberPost - a.nberPost);
+    posts.sort((a, b) =>{return b.date.localeCompare(a.date);});
     return(
         <div class="recentPostContain">
         <table name="recentPostTbl">
@@ -27,4 +27,4 @@ const RecentPostTbl = function  (props){
     );
 }
 
-export default RecentPostTbl;
+export default RecentPostsTbl;
