@@ -15,7 +15,7 @@ const TopicStatsTbl = function (props){
               <th>status</th>
             </tr>
             {topics.map((topic) => 
-              <tr>
+              <tr className="dataRows">
                 <td>{topic.topic_title}</td>
                 <td>{topic.nberPost}</td>
                 <td>{topic.status}</td>

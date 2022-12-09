@@ -20,7 +20,7 @@ const UserStatsTbl = function  (props){
                         <th>nberPosts</th>
                     </tr>
                     {users.map((user) => 
-                    <tr>
+                    <tr className="dataRows">
                         <td>{user.user_id}</td>
                         <td>{user.nberPosts}</td>
                     </tr>)}

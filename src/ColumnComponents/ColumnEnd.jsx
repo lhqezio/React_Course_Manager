@@ -3,6 +3,7 @@ import TopicStatsTbl from "../TableComponents/TopicStatsTbl";
 import UserStatsTbl from "../TableComponents/UserStatsTbl";
 import RecentPostsTbl from "../TableComponents/RecentPostsTbl";
 import UseFetch from "../CustomHooks/UseFetch";
+import { useState } from "react";
 
 function ColumnEnd () {
   
@@ -44,6 +45,9 @@ function ColumnEnd () {
   }
 };
 
+export default ColumnEnd;
+
+/*
 function changeRowColor(tableName, tbleHeader){
   
   let tbl = document.getElementsByName(`${tableName}`)[0];
@@ -56,8 +60,6 @@ function changeRowColor(tableName, tbleHeader){
       row.style.backgroundColor = 'aqua';
     }
   }
-
-export default ColumnEnd;
-
+*/
 
   

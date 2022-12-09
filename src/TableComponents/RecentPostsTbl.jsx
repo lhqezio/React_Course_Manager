@@ -1,7 +1,9 @@
+import { useState } from "react";
 
 const RecentPostsTbl = function  (props){
     let posts = props.posts;
     posts.sort((a, b) =>{return b.date.localeCompare(a.date);});
+    const[color, setColor] = useState('red');
     return(
         <div class="recentPostContain">
         <table name="recentPostTbl">
@@ -13,7 +15,7 @@ const RecentPostsTbl = function  (props){
               <th>rate</th>
             </tr>
             {posts.map((post) => 
-              <tr>
+              <tr className="dataRows">
                 <td>{post.author}</td>
                 <td>{post.date}</td>
                 <td>{post.rate}</td>
@@ -24,5 +26,6 @@ const RecentPostsTbl = function  (props){
       </div>
     );
 }
+
 
 export default RecentPostsTbl;
