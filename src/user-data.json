@@ -1,44 +1,44 @@
 {
-    "users": [
-        {
-            "user_id": "nasr",
-            "password": "nasr123",
-            "nberPosts": 10
-        },
-        {
-            "user_id": "badr",
-            "password": "badr123",
-            "nberPosts": 20
-        },
-        {
-            "user_id": "myles",
-            "password": "myles123",
-            "nberPosts": 30
-        },
-        {
-            "user_id": "dan",
-            "password": "dan123",
-            "nberPosts": 40
-        },
-        {
-            "user_id": "laurent",
-            "password": "laurent123",
-            "nberPosts": 13
-        },
-        {
-            "user_id": "imene",
-            "password": "imene123",
-            "nberPosts": 7
-        },
-        {
-            "user_id": "carlton",
-            "password": "carlton123",
-            "nberPosts": 45
-        },
-        {
-            "user_id": "victor",
-            "password": "victopr123",
-            "nberPosts": 17
-        }
-    ]
+  "users": [
+    {
+      "user_id": "nasr",
+      "password": "nasr123",
+      "nberPosts": 10
+    },
+    {
+      "user_id": "badr",
+      "password": "badr123",
+      "nberPosts": 20
+    },
+    {
+      "user_id": "myles",
+      "password": "myles123",
+      "nberPosts": 30
+    },
+    {
+      "user_id": "dan",
+      "password": "dan123",
+      "nberPosts": 40
+    },
+    {
+      "user_id": "laurent",
+      "password": "laurent123",
+      "nberPosts": 13
+    },
+    {
+      "user_id": "imene",
+      "password": "imene123",
+      "nberPosts": 7
+    },
+    {
+      "user_id": "carlton",
+      "password": "carlton123",
+      "nberPosts": 45
+    },
+    {
+      "user_id": "victor",
+      "password": "victopr123",
+      "nberPosts": 17
+    }
+  ]
 }

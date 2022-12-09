@@ -1,5 +1,4 @@
 import "./columnEnd.css";
-import TopicStatTbl from "../TableComponents/TopicStatsTbl";
 import UserStatTbl from "../TableComponents/UserStatTbl";
 import RecentPostsTbl from "../TableComponents/RecentPostsTbl";
 import UseFetch from "../CustomHooks/UseFetch";
@@ -36,28 +35,12 @@ function ColumnEnd () {
     });
     return( 
       <section id="endColumn">
-        <UserStatTbl users = {userList} />
-        <TopicStatTbl topics = {topics} />
+        <UserStatsTbl users = {userList} />
+        <TopicStatsTbl topics = {topics} />
         <RecentPostsTbl posts = {posts} />
       </section>
     )
   }
 };
 
-function changeRowColor(tableName, tbleHeader){
-  
-  let tbl = document.getElementsByName(`${tableName}`)[0];
-  let sibRow = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-2];
-  let thead = tbl.getElementsByClassName(`${tbleHeader}`)[0];
-  let row = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-1];
-  if(sibRow != thead && sibRow.style.backgroundColor == 'aqua'){
-      row.style.backgroundColor = 'skyblue';
-  }else{
-      row.style.backgroundColor = 'aqua';
-    }
-  }
-
 export default ColumnEnd;
-
-
-  

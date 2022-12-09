@@ -1,5 +1,7 @@
+import { Component } from "react";
+import ColumnEnd from "../ColumnComponents/ColumnEnd";
 
-const UserStatTbl = function  (props){
+const UserStatsTbl = function  (props){
     let users = props.users;
     users.sort((a,b) => b.nberPosts - a.nberPosts);
     return(
@@ -28,4 +30,4 @@ const UserStatTbl = function  (props){
     );
 }
 
-export default UserStatTbl;     
+export default UserStatsTbl;     

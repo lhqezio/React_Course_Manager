@@ -1,5 +1,7 @@
+import { Component } from "react";
+import ColumnEnd from "../ColumnComponents/ColumnEnd";
 
-const TopicStatTbl = function (props){
+const TopicStatsTbl = function (props){
     let topics = props.topics;
     topics.sort((a,b) => b.nberPost - a.nberPost);
     return(
@@ -25,4 +27,4 @@ const TopicStatTbl = function (props){
     );
 }
 
-export default TopicStatTbl;
+export default TopicStatsTbl;
