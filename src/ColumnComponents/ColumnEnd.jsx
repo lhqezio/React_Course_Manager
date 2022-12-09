@@ -1,5 +1,6 @@
 import "./columnEnd.css";
-import UserStatTbl from "../TableComponents/UserStatTbl";
+import TopicStatsTbl from "../TableComponents/TopicStatsTbl";
+import UserStatsTbl from "../TableComponents/UserStatsTbl";
 import RecentPostsTbl from "../TableComponents/RecentPostsTbl";
 import UseFetch from "../CustomHooks/UseFetch";
 
@@ -43,4 +44,20 @@ function ColumnEnd () {
   }
 };
 
+function changeRowColor(tableName, tbleHeader){
+  
+  let tbl = document.getElementsByName(`${tableName}`)[0];
+  let sibRow = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-2];
+  let thead = tbl.getElementsByClassName(`${tbleHeader}`)[0];
+  let row = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-1];
+  if(sibRow != thead && sibRow.style.backgroundColor == 'aqua'){
+      row.style.backgroundColor = 'skyblue';
+  }else{
+      row.style.backgroundColor = 'aqua';
+    }
+  }
+
 export default ColumnEnd;
+
+
+  
