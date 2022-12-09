@@ -3,7 +3,6 @@ import TopicStatsTbl from "../TableComponents/TopicStatsTbl";
 import UserStatsTbl from "../TableComponents/UserStatsTbl";
 import RecentPostsTbl from "../TableComponents/RecentPostsTbl";
 import UseFetch from "../CustomHooks/UseFetch";
-import { useState } from "react";
 
 function ColumnEnd () {
   
@@ -25,16 +24,8 @@ function ColumnEnd () {
     let topics = [];
     let posts = [];  
     let categories = Object.values(forumData.data);
-    categories[0].forEach((category) => {
-      Object.values(category.topicList).forEach((top) =>{
-        //Fill topics
-        topics.push(top);
-        top.listPosts.forEach((post) =>{
-          //Fill posts
-          posts.push(post);
-      });
-      });
-    });
+    storeData(categories, topics, posts);
+
     return( 
       <section id="endColumn">
         <UserStatsTbl users = {userList} />
@@ -45,21 +36,26 @@ function ColumnEnd () {
   }
 };
 
-export default ColumnEnd;
+/**
+ * Function that stores posts in a posts array and 
+ * topics in a topics array with forEach and .push() 
+ * @param categories 
+ * @param topics 
+ * @param posts 
+ */
+function storeData(categories, topics, posts){
+  categories[0].forEach((category) => {
+    Object.values(category.topicList).forEach((top) =>{
+      //Fill topics
+      topics.push(top);
+      top.listPosts.forEach((post) =>{
+        //Fill posts
+        posts.push(post);
+    });
+    });
+  });
+}
 
-/*
-function changeRowColor(tableName, tbleHeader){
-  
-  let tbl = document.getElementsByName(`${tableName}`)[0];
-  let sibRow = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-2];
-  let thead = tbl.getElementsByClassName(`${tbleHeader}`)[0];
-  let row = tbl.getElementsByTagName('tr')[tbl.getElementsByTagName('tr').length-1];
-  if(sibRow != thead && sibRow.style.backgroundColor == 'aqua'){
-      row.style.backgroundColor = 'skyblue';
-  }else{
-      row.style.backgroundColor = 'aqua';
-    }
-  }
-*/
+export default ColumnEnd;
 
   
