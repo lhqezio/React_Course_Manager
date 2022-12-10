@@ -38,3 +38,13 @@ table {
 .topicStatContain td {
   border: 2px black solid;
 }
+
+
+/* CSS TO CHANGE ROWS COLOR */
+.dataRows:nth-child(odd) {
+  background-color: blue;
+}
+
+.dataRows:nth-child(even) {
+  background-color: skyblue;
+}
