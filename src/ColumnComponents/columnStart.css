@@ -1,3 +1,5 @@
+/*Farhan khandaker*/
+
 #columnStart{
     background-color: #696969;
     display: flex;
@@ -13,6 +15,7 @@
 
 #columnStart > div > p{
     border: solid black 2px;
+    background-color: whitesmoke;
 }
 
 #columnStart > div{

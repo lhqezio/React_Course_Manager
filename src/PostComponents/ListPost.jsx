@@ -3,9 +3,7 @@ import Post from "./Post";
 class ListPost extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      posts: this.props.posts,
-    };
+    this.state = {posts: this.props.posts};
     this.onLikeChange = this.onLikeChange.bind(this);
     this.onDislikeChange = this.onDislikeChange.bind(this);
     this.onRemoveChange = this.onRemoveChange.bind(this);
