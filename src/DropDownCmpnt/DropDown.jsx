@@ -1,3 +1,11 @@
+/**
+ * @file DropDown.jsx
+ * @brief DropDown component
+ * @version 1.0
+ * @date 2022-12-09
+ * @author Hoang Quoc Le
+ */
+
 function DropDown(props) {
   const { options, onChange, type } = props;
   return (

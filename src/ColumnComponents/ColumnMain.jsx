@@ -1,3 +1,11 @@
+/**
+ * @file ColumnMain.jsx
+ * @brief Main component of the column, contains the top settings and the list of posts
+ * @version 1.0
+ * @date 2022-12-09
+ * @author Hoang Quoc Le
+ */
+
 import TopSettings from "../SelectionCmpnts/TopSettings";
 import UseFetch from "../CustomHooks/UseFetch";
 import ListPost from "../PostComponents/ListPost";

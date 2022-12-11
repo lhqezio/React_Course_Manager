@@ -1,3 +1,11 @@
+/**
+ * @file Post.jsx
+ * @brief Post component
+ * @version 1.0
+ * @date 2022-12-09
+ * @author Hoang Quoc Le
+ */
+
 function Post(props) {
   const { post, likeOnChange, dislikeOnChange, removeOnChange } = props;
   return (

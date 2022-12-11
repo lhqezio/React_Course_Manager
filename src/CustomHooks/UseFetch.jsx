@@ -1,3 +1,10 @@
+/**
+ * @file useFetch.jsx
+ * @brief useFetch custom hook
+ * @version 1.0
+ * @date 2022-12-09
+ * @author Hoang Quoc Le
+ */
 import React, { useState, useEffect } from "react";
 
 function UseFetch(url) {
@@ -6,10 +13,8 @@ function UseFetch(url) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const abortCont = new AbortController();
-
     setTimeout(() => {
-      fetch(url, { signal: abortCont.signal })
+      fetch(url)
         .then((res) => {
           if (!res.ok) {
             throw Error("Could not fetch the data for that resource");
@@ -22,16 +27,11 @@ function UseFetch(url) {
           setError(null);
         })
         .catch((err) => {
-          if (err.name === "AbortError") {
-            console.log("fetch aborted");
-          } else {
             setIsPending(false);
             setError(err.message);
-          }
         });
     }, 500);
-
-    return () => abortCont.abort();
+    // Intentionally gave the fetch a delay of 500ms to show the loading screen
   }, [url]);
 
   return { data, isPending, error };

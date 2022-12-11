@@ -1,3 +1,11 @@
+/**
+ * @file ListPost.jsx
+ * @brief List of posts component
+ * @version 1.0
+ * @date 2022-12-09
+ * @author Hoang Quoc Le
+ */
+
 import React, { Component } from "react";
 import Post from "./Post";
 class ListPost extends Component {

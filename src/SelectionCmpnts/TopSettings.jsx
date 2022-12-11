@@ -1,3 +1,12 @@
+/** 
+ * TopSettings component
+ * @file TopSettings.jsx
+ * @brief TopSettings component
+ * @version 1.0
+ * @date 2022-12-09
+ * @author Hoang Quoc Le
+ */
+
 import DropDown from "../DropDownCmpnt/DropDown";
 import { Component } from "react";
 
