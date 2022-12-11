@@ -1,7 +1,7 @@
 function Post(props) {
   const { post, likeOnChange, dislikeOnChange, removeOnChange } = props;
   return (
-    <div>
+    <div className="postContainer">
       <div className="header">{post.text}</div>
       likes: {post.like}
       <button id={"l" + post.id} onClick={likeOnChange}>

@@ -2,11 +2,12 @@ import TopSettings from "../SelectionCmpnts/TopSettings";
 import UseFetch from "../CustomHooks/UseFetch";
 import ListPost from "../PostComponents/ListPost";
 import { useState } from "react";
+import "./columnMain.css"
+
 function ColumnMain() {
   let [categorySel, setCategorySel] = useState(1);
   let [topicSel, setTopicSel] = useState(1);
-  const url =
-    "https://sonic.dawsoncollege.qc.ca/~nasro/js320/project2/forum-data.php";
+  const url = "https://sonic.dawsoncollege.qc.ca/~nasro/js320/project2/forum-data.php";
   const { data, isPending } = UseFetch(url);
 
   function topicOnchange(e) {
@@ -15,9 +16,7 @@ function ColumnMain() {
 
   function getPosts() {
     let posts = [];
-    posts = Object.values(data["categories"])[categorySel - 1]["topicList"][
-      topicSel - 1
-    ]["listPosts"];
+    posts = Object.values(data["categories"])[categorySel - 1]["topicList"][topicSel - 1]["listPosts"];
     return posts;
   }
 

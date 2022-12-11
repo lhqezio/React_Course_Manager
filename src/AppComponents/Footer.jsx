@@ -1,3 +1,5 @@
+//Farhan Khandaker
+
 function Footer() {
   return (
     <footer>

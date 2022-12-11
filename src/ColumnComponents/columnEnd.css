@@ -1,3 +1,5 @@
+/*Farhan khandaker*/
+
 #endColumn {
   background-color: #696969;
   display: flex;
@@ -42,9 +44,9 @@ table {
 
 /* CSS TO CHANGE ROWS COLOR */
 .dataRows:nth-child(odd) {
-  background-color: blue;
+  background-color: white;
 }
 
 .dataRows:nth-child(even) {
-  background-color: skyblue;
+  background-color: whitesmoke;
 }
