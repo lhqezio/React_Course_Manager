@@ -9,9 +9,7 @@ const UserStatsTbl = function  (props){
             <table name="userStatTbl">
                 <thead>
                     <tr>
-                        <td>
-                        Users stats
-                        </td>
+                        <td colSpan={2}>Users stats</td>
                     </tr>
                 </thead>
                 <tbody>

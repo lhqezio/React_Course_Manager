@@ -7,7 +7,11 @@ const TopicStatsTbl = function (props){
     return(
         <div class="topicStatContain">
         <table name="topicStatTbl">
-          <thead>Topic Stats</thead>
+          <thead>
+            <tr>
+              <td colSpan={3}>Topic Stats</td>
+            </tr>
+          </thead>
           <tbody>
             <tr class="topicStatHeader">
               <th>topic_title</th>
