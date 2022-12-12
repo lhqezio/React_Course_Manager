@@ -3,7 +3,7 @@
 #columnMain {
     flex: 3;
     background-color: #696969;
-    height: 70vh;
+    height: 60vh;
     overflow-y: auto;
     border-radius: 30px;
     margin: 0px 10px;
