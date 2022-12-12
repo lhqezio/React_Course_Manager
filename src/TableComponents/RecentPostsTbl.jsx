@@ -7,7 +7,11 @@ const RecentPostsTbl = function  (props){
     return(
         <div class="recentPostContain">
         <table name="recentPostTbl">
-          <thead>Recent Posts</thead>
+          <thead>
+            <tr>
+              <td colSpan={3}>Recent Posts</td>
+            </tr>
+            </thead>
           <tbody>
             <tr id="recentPostsHeader">
               <th>autor</th>
