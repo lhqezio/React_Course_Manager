@@ -1,3 +1,5 @@
+//Mohamed Loutfi
+
 import { Component } from "react";
 import ColumnEnd from "../ColumnComponents/ColumnEnd";
 
@@ -14,8 +16,8 @@ const UserStatsTbl = function (props){
                 </thead>
                 <tbody>
                     <tr className="userStatHeader">
-                        <th>user</th>
-                        <th>nberPosts</th>
+                        <th>User</th>
+                        <th>Number of Posts</th>
                     </tr>
                     {users.map((user, i) => 
                     <tr className="dataRows" key={i}>

@@ -9,6 +9,7 @@
 
 import DropDown from "../DropDownCmpnt/DropDown";
 import { Component } from "react";
+import "./TopSettings.css"
 
 class TopSettings extends Component {
   constructor(props) {
@@ -61,16 +62,14 @@ class TopSettings extends Component {
   render() {
     return (
       <div className="top-settings">
-        <DropDown
-          options={this.categories}
-          onChange={this.onChange}
-          type="category"
-        />
-        <DropDown
-          options={this.state.topics}
-          onChange={this.props.topicOnchange}
-          type="topic"
-        />
+        <div>
+          <p>Category</p>
+          <DropDown options={this.categories} onChange={this.onChange} type="category"/>
+        </div>
+        <div>
+          <p>Topic</p>
+          <DropDown options={this.state.topics} onChange={this.props.topicOnchange} type="topic"/>
+          </div>
       </div>
     );
   }
