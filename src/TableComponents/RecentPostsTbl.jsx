@@ -5,7 +5,7 @@ const RecentPostsTbl = function  (props){
     posts.sort((a, b) =>{return b.date.localeCompare(a.date);});
     const[color, setColor] = useState('red');
     return(
-        <div class="recentPostContain">
+        <div className="recentPostContain">
         <table name="recentPostTbl">
           <thead>
             <tr>
@@ -18,8 +18,8 @@ const RecentPostsTbl = function  (props){
               <th>date</th>
               <th>rate</th>
             </tr>
-            {posts.map((post) => 
-              <tr className="dataRows">
+            {posts.map((post, i) => 
+              <tr className="dataRows" key={i}>
                 <td>{post.author}</td>
                 <td>{post.date}</td>
                 <td>{post.rate}</td>
