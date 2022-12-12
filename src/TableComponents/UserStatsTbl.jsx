@@ -1,11 +1,11 @@
 import { Component } from "react";
 import ColumnEnd from "../ColumnComponents/ColumnEnd";
 
-const UserStatsTbl = function  (props){
+const UserStatsTbl = function (props){
     let users = props.users;
     users.sort((a,b) => b.nberPosts - a.nberPosts);
     return(
-        <div class="userStatContain">
+        <div className="userStatContain">
             <table name="userStatTbl">
                 <thead>
                     <tr>
@@ -13,12 +13,12 @@ const UserStatsTbl = function  (props){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="userStatHeader">
+                    <tr className="userStatHeader">
                         <th>user</th>
                         <th>nberPosts</th>
                     </tr>
-                    {users.map((user) => 
-                    <tr className="dataRows">
+                    {users.map((user, i) => 
+                    <tr className="dataRows" key={i}>
                         <td>{user.user_id}</td>
                         <td>{user.nberPosts}</td>
                     </tr>)}

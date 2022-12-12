@@ -5,7 +5,7 @@ const TopicStatsTbl = function (props){
     let topics = props.topics;
     topics.sort((a,b) => b.nberPost - a.nberPost);
     return(
-        <div class="topicStatContain">
+        <div className="topicStatContain">
         <table name="topicStatTbl">
           <thead>
             <tr>
@@ -13,13 +13,13 @@ const TopicStatsTbl = function (props){
             </tr>
           </thead>
           <tbody>
-            <tr class="topicStatHeader">
+            <tr className="topicStatHeader">
               <th>topic_title</th>
               <th>nberPosts</th>
               <th>status</th>
             </tr>
-            {topics.map((topic) => 
-              <tr className="dataRows">
+            {topics.map((topic, i) => 
+              <tr className="dataRows" key={i}>
                 <td>{topic.topic_title}</td>
                 <td>{topic.nberPost}</td>
                 <td>{topic.status}</td>
