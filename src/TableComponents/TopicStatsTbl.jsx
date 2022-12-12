@@ -1,3 +1,5 @@
+//Mohamed Loutfi
+
 import { Component } from "react";
 import ColumnEnd from "../ColumnComponents/ColumnEnd";
 
@@ -14,9 +16,9 @@ const TopicStatsTbl = function (props){
           </thead>
           <tbody>
             <tr className="topicStatHeader">
-              <th>topic_title</th>
-              <th>nberPosts</th>
-              <th>status</th>
+              <th>Topic Title</th>
+              <th>Number of Posts</th>
+              <th>Status</th>
             </tr>
             {topics.map((topic, i) => 
               <tr className="dataRows" key={i}>

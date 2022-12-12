@@ -1,3 +1,5 @@
+//Mohamed Loutfi
+
 import { useState } from "react";
 
 const RecentPostsTbl = function  (props){
@@ -14,9 +16,9 @@ const RecentPostsTbl = function  (props){
             </thead>
           <tbody>
             <tr id="recentPostsHeader">
-              <th>autor</th>
-              <th>date</th>
-              <th>rate</th>
+              <th>Author</th>
+              <th>Date</th>
+              <th>Rate</th>
             </tr>
             {posts.map((post, i) => 
               <tr className="dataRows" key={i}>

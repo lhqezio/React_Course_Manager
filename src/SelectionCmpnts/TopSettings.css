@@ -1,0 +1,19 @@
+/*Farhan Khandaker*/
+
+.top-settings > div{
+    display: flex;
+    border: solid black 2px;
+    background-color: whitesmoke;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.top-settings > div > p{
+    text-align: center;
+    flex: 1;
+}
+
+.top-settings > div > select{
+    flex: 4;
+}
+
